@@ -1,4 +1,4 @@
-# Oak's Lab Backend GraphQL Application
+# Oak's Lab Backend TypeScript/ Apollo Server/ GraphQL Application
 
 ### Technologies used in this project
 
@@ -8,8 +8,6 @@
 1. Apollo Server
 1. GraphQL Tools
 1. Mongoose
-1. Axios
-1. Docker
 
 I have developed the apis in GraphQL and Apollo Server. You can access the
 
