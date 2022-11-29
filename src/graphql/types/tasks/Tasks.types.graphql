@@ -1,0 +1,25 @@
+type Task {
+  name: String
+  startDate: Date
+  endDate: Date
+  completed: Boolean
+  message: String
+  status: Int
+  success: Boolean
+  taskId: Int
+}
+
+input NewTaskData {
+  name: String
+  startDate: Date
+  endDate: Date
+  completed: Boolean
+  sequence: Int
+  phaseId: Int!
+  startupId: Int!
+}
+
+type Mutation {
+  addTask(newTask: NewTaskData): Task
+  markTaskAsCompleted(phaseId: Int!, startupId: Int!, taskId: Int!): Task
+}

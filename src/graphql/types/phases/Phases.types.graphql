@@ -1,0 +1,30 @@
+type Mutation {
+  addPhase(newPhase: PhaseInput): Phase
+  markPhaseAsComplete(phaseId: Int!, startupId: Int!): Phase
+}
+
+type Phase {
+  name: String
+  startDate: Date
+  endDate: Date
+  completed: Boolean
+  sequence: Int
+  tasks: [Task]
+  message: String
+  status: Int
+  success: Boolean
+  locked: Boolean
+  phaseId: Int
+}
+
+input PhaseInput {
+  name: String
+  startDate: Date
+  endDate: Date
+  completed: Boolean
+  startupId: Int!
+}
+
+type Query {
+  getPhase: Phase
+}

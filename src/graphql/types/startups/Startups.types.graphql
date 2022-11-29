@@ -1,0 +1,30 @@
+type Startup {
+  name: String
+  owner: String
+  startDate: Date
+  funding: String
+  phases: [Phase]
+  currentPhase: String
+  sequence: String
+  message: String
+  status: Int
+  success: Boolean
+  startupId: Int
+}
+
+input NewStartupData {
+  name: String
+  owner: String
+  startDate: Date
+  endDate: Date
+  currentPhase: String
+  funding: String
+}
+
+type Mutation {
+  addStartup(newStartup: NewStartupData): Startup
+}
+
+type Query {
+  getStartups: [Startup]
+}
